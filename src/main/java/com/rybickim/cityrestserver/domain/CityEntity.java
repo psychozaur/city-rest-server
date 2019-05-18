@@ -5,11 +5,13 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class City {
+public class CityEntity {
+    private int repoId;
     private String cityName;
     private int population;
 
-//    public static void main(String[] args) {
-//        City city = new City("wawa", 1);
-//    }
+    public CityEntity(String cityName, int population) {
+        this.cityName = cityName;
+        this.population = population;
+    }
 }
