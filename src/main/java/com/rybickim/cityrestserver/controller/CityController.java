@@ -24,7 +24,7 @@ public class CityController {
 
     @GetMapping("/cities")
     public List<City> getMyBestCities() {
-        logger.debug("getMyBestCities() from CityController");
+        logger.debug("getMyBestCities() from CityController: " + startService.getMyCities());
 
         return startService.getMyCities();
     }

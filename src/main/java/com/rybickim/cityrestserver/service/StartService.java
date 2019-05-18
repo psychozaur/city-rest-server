@@ -1,6 +1,7 @@
 package com.rybickim.cityrestserver.service;
 
 import com.rybickim.cityrestserver.domain.City;
+import com.rybickim.cityrestserver.repository.CityRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +15,15 @@ public class StartService {
 
     private static final Logger logger = LoggerFactory.getLogger(StartService.class);
 
-    private List<City> myCities;
+    private CityRepository cityRepository;
 
-    public StartService(List<City> myCities) {
-        this.myCities = myCities;
+    public StartService(CityRepository cityRepository) {
+        this.cityRepository = cityRepository;
     }
 
     public List<City> getMyCities(){
-        return this.myCities;
+        logger.debug("getMyCities(): " + cityRepository.readCitiesFromRepository());
+
+        return cityRepository.readCitiesFromRepository();
     }
 }
