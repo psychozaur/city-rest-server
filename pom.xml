@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.rybickim</groupId>
     <artifactId>city-rest-server</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>city-rest-server</name>
     <description>City REST server demo</description>
 
