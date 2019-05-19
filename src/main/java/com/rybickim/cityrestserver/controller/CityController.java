@@ -8,8 +8,7 @@ import com.rybickim.cityrestserver.service.impl.CityService;
 import com.rybickim.cityrestserver.service.impl.WeatherService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -32,6 +31,42 @@ public class CityController {
 
         return cityService.getMyCities();
     }
+
+    @GetMapping("/cities/{id}")
+    public CityDTO getCityById(@PathVariable("id") Long id) {
+        logger.debug("getCityById() with id [{}]", id);
+
+        CityDTO dummyResult = new CityDTO("Moscow", 3);
+
+        logger.debug("city of id [{}] is [{}]", id, dummyResult);
+        return dummyResult;
+
+//        return cityService.getMyCities().get((id.intValue()));
+    }
+
+    @PostMapping("/cities")
+    public String createCity(@RequestBody CityDTO newCity) {
+        logger.debug("createCity(), newCity: [{}]", newCity);
+
+        CityDTO persisted = new CityDTO(newCity.getCityName(), newCity.getPopulation(), 1L);
+
+        return persisted.toString();
+    }
+
+    @DeleteMapping("/cities/{id}")
+    public String deleteCityById(@PathVariable("id") Long id){
+        logger.debug("deleteCityById() with id [{}]", id);
+
+        return "Deleted successfully";
+    }
+
+    @PutMapping("/cities")
+    public CityDTO updateCity(@RequestBody CityDTO toUpdate){
+        logger.debug("updateCityById(): [{}]", toUpdate);
+
+        return toUpdate;
+    }
+
 
     @GetMapping("/weather")
     public Weather getMyWeather() {
