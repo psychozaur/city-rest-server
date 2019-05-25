@@ -44,6 +44,10 @@ public class CityController {
 //        return cityService.getMyCities().get((id.intValue()));
     }
 
+    // TODO install RabbitMQ
+    // najpierw maszyna wirtualna Erlanga
+    // a potem RabbitMQ - kolejka (np. producent-konsument, ale persistent!)
+
     @PostMapping("/cities")
     public String createCity(@RequestBody CityDTO newCity) {
         logger.debug("createCity(), newCity: [{}]", newCity);
@@ -60,6 +64,7 @@ public class CityController {
         return "Deleted successfully";
     }
 
+    //pamietaj o zgodnych nazwach pol :P
     @PutMapping("/cities")
     public CityDTO updateCity(@RequestBody CityDTO toUpdate){
         logger.debug("updateCityById(): [{}]", toUpdate);
