@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
 @Repository
-@Qualifier("weatherRepo")
 public class WeatherRepository{
 
     private static final Logger logger = LoggerFactory.getLogger(WeatherRepository.class);

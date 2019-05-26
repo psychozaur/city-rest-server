@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-@Qualifier("cityRepo")
 public class CityRepository{
 
     private static final Logger logger = LoggerFactory.getLogger(CityRepository.class);

@@ -1,6 +1,7 @@
 package com.rybickim.cityrestserver.service.impl;
 
 import com.rybickim.cityrestserver.domain.weather.Weather;
+import com.rybickim.cityrestserver.repository.WeatherOperations;
 import com.rybickim.cityrestserver.repository.dummy.WeatherRepository;
 import com.rybickim.cityrestserver.service.StartService;
 import org.slf4j.Logger;
@@ -13,9 +14,9 @@ public class WeatherService implements StartService {
 
     private static final Logger logger = LoggerFactory.getLogger(WeatherService.class);
 
-    private WeatherRepository weatherRepository;
+    private WeatherOperations weatherRepository;
 
-    public WeatherService(@Qualifier("weatherRepo") WeatherRepository weatherRepository) {
+    public WeatherService(@Qualifier("weatherRepo") WeatherOperations weatherRepository) {
         this.weatherRepository = weatherRepository;
     }
 
