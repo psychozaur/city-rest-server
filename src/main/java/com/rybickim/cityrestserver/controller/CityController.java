@@ -2,8 +2,6 @@ package com.rybickim.cityrestserver.controller;
 
 import com.rybickim.cityrestserver.data_transfer_object.CityDTO;
 import com.rybickim.cityrestserver.domain.weather.Weather;
-import com.rybickim.cityrestserver.repository.impl.WeatherRepository;
-import com.rybickim.cityrestserver.service.StartService;
 import com.rybickim.cityrestserver.service.impl.CityService;
 import com.rybickim.cityrestserver.service.impl.WeatherService;
 import org.slf4j.Logger;

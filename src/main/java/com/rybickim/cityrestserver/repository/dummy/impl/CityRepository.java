@@ -1,7 +1,7 @@
-package com.rybickim.cityrestserver.repository.impl;
+package com.rybickim.cityrestserver.repository.dummy.impl;
 
 import com.rybickim.cityrestserver.domain.CityEntity;
-import com.rybickim.cityrestserver.repository.DataRepository;
+import com.rybickim.cityrestserver.repository.dummy.DataRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;

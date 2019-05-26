@@ -2,8 +2,7 @@ package com.rybickim.cityrestserver.service.impl;
 
 import com.rybickim.cityrestserver.converter.CityConverter;
 import com.rybickim.cityrestserver.data_transfer_object.CityDTO;
-import com.rybickim.cityrestserver.repository.DataRepository;
-import com.rybickim.cityrestserver.repository.impl.CityRepository;
+import com.rybickim.cityrestserver.repository.dummy.impl.CityRepository;
 import com.rybickim.cityrestserver.service.StartService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
