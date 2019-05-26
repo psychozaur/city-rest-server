@@ -1,7 +1,7 @@
 package com.rybickim.cityrestserver.service.impl;
 
 import com.rybickim.cityrestserver.domain.weather.Weather;
-import com.rybickim.cityrestserver.repository.dummy.impl.WeatherRepository;
+import com.rybickim.cityrestserver.repository.dummy.WeatherRepository;
 import com.rybickim.cityrestserver.service.StartService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

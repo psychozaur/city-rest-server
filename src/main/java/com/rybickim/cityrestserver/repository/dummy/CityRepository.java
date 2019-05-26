@@ -1,7 +1,6 @@
-package com.rybickim.cityrestserver.repository.dummy.impl;
+package com.rybickim.cityrestserver.repository.dummy;
 
 import com.rybickim.cityrestserver.domain.CityEntity;
-import com.rybickim.cityrestserver.repository.dummy.DataRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,7 +11,7 @@ import java.util.List;
 
 @Repository
 @Qualifier("cityRepo")
-public class CityRepository implements DataRepository {
+public class CityRepository{
 
     private static final Logger logger = LoggerFactory.getLogger(CityRepository.class);
 

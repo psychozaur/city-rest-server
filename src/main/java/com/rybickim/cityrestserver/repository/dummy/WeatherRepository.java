@@ -1,8 +1,7 @@
-package com.rybickim.cityrestserver.repository.dummy.impl;
+package com.rybickim.cityrestserver.repository.dummy;
 
 import com.rybickim.cityrestserver.config.Configuration;
 import com.rybickim.cityrestserver.domain.weather.Weather;
-import com.rybickim.cityrestserver.repository.dummy.DataRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -11,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Repository
 @Qualifier("weatherRepo")
-public class WeatherRepository implements DataRepository {
+public class WeatherRepository{
 
     private static final Logger logger = LoggerFactory.getLogger(WeatherRepository.class);
 

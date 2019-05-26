@@ -2,7 +2,7 @@ package com.rybickim.cityrestserver.service.impl;
 
 import com.rybickim.cityrestserver.converter.CityConverter;
 import com.rybickim.cityrestserver.data_transfer_object.CityDTO;
-import com.rybickim.cityrestserver.repository.dummy.impl.CityRepository;
+import com.rybickim.cityrestserver.repository.CityOperations;
 import com.rybickim.cityrestserver.service.StartService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,11 +18,11 @@ public class CityService implements StartService {
 
     private static final Logger logger = LoggerFactory.getLogger(CityService.class);
 
-    private CityRepository cityRepository;
+    private CityOperations cityRepository;
     private CityConverter cityConverter;
 
     @Autowired
-    public CityService(@Qualifier("cityRepo") CityRepository dataRepository, CityConverter cityConverter) {
+    public CityService(@Qualifier("cityRepo") CityOperations dataRepository, CityConverter cityConverter) {
         this.cityRepository = dataRepository;
         this.cityConverter = cityConverter;
     }
